@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>D10S↑ — Flyer</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,400;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#111;display:flex;flex-direction:column;align-items:center;padding:2rem;font-family:'DM Sans',sans-serif;gap:1.5rem}
+.note{color:rgba(255,255,255,.4);font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;text-align:center}
+.lang-tabs{display:flex;gap:.5rem;flex-wrap:wrap;justify-content:center}
+.ltab{background:none;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.4);font-family:'DM Sans',sans-serif;font-size:.7rem;letter-spacing:.2em;padding:.4rem .9rem;cursor:pointer;transition:all .2s}
+.ltab.active{border-color:#F2C12E;color:#F2C12E}
+.card{width:320px;background:#080806;position:relative;overflow:hidden;border:1px solid rgba(242,193,46,.15);display:none}
+.card.active{display:block}
+.cbg{position:absolute;inset:0;pointer-events:none;opacity:.07}
+.cbg svg{width:100%;height:100%}
+.ci{position:relative;z-index:1;padding:2rem 1.5rem}
+.ey{font-size:.55rem;letter-spacing:.4em;text-transform:uppercase;color:#F2C12E;margin-bottom:1rem;text-align:center}
+.logo{font-family:'Bebas Neue',sans-serif;font-size:5rem;line-height:.85;color:#F5F0E8;text-align:center;letter-spacing:.05em}
+.logo span{color:#F2C12E}
+.sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.95rem;color:rgba(245,240,232,.55);text-align:center;margin-top:.3rem}
+.div{width:35px;height:1px;background:#F2C12E;margin:1.2rem auto}
+.ttl{font-family:'Cormorant Garamond',serif;font-size:1.2rem;line-height:1.4;color:#F5F0E8;text-align:center}
+.ttl em{color:#F2C12E;font-style:italic}
+.nap{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.9rem;color:#F2C12E;text-align:center;margin-top:.8rem}
+.nat{font-size:.68rem;color:rgba(245,240,232,.35);text-align:center;margin-top:.2rem}
+.when{background:rgba(242,193,46,.08);border:1px solid rgba(242,193,46,.2);padding:.6rem 1rem;margin-top:.8rem;text-align:center}
+.when p{font-size:.68rem;color:rgba(245,240,232,.6);line-height:1.5}
+.when strong{color:#F2C12E;font-size:.75rem}
+.qrw{display:flex;flex-direction:column;align-items:center;margin-top:1.2rem}
+.qrb{width:130px;height:130px;border:1.5px solid #F2C12E;display:flex;align-items:center;justify-content:center;background:#0A0A08;padding:5px}
+.qrl{font-size:.6rem;letter-spacing:.25em;text-transform:uppercase;color:rgba(245,240,232,.35);margin-top:.6rem;text-align:center}
+.buls{display:flex;gap:.4rem;margin-top:1rem;justify-content:center;flex-wrap:wrap}
+.bul{border:1px solid rgba(242,193,46,.2);padding:.25rem .5rem;font-size:.6rem;color:rgba(245,240,232,.5);letter-spacing:.05em}
+.ft{margin-top:1rem;text-align:center;border-top:1px solid rgba(242,193,46,.1);padding-top:.8rem}
+.ft p{font-size:.58rem;color:rgba(245,240,232,.25);letter-spacing:.15em;text-transform:uppercase;margin-bottom:.3rem}
+.ft strong{color:#F2C12E;font-size:.68rem}
+.langs{display:flex;justify-content:center;gap:.3rem;margin-top:.4rem}
+.lng{font-size:.55rem;border:1px solid rgba(242,193,46,.15);padding:.15rem .3rem;color:rgba(245,240,232,.25)}
+.prbtn{background:#F2C12E;color:#080806;border:none;font-family:'DM Sans',sans-serif;font-weight:500;font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;padding:.9rem 2.5rem;cursor:pointer;transition:all .3s}
+.prbtn:hover{background:#F5F0E8}
+@media print{body{background:white;padding:0}.note,.prbtn,.lang-tabs{display:none}.card{display:block !important}}
+</style>
+</head>
+<body>
+
+<p class="note">Scegli la lingua / Choose language</p>
+
+<div class="lang-tabs">
+  <button class="ltab active" onclick="showCard('en',this)">🇬🇧 English</button>
+  <button class="ltab" onclick="showCard('it',this)">🇮🇹 Italiano</button>
+  <button class="ltab" onclick="showCard('es',this)">🇪🇸 Español</button>
+  <button class="ltab" onclick="showCard('de',this)">🇩🇪 Deutsch</button>
+  <button class="ltab" onclick="showCard('fr',this)">🇫🇷 Français</button>
+</div>
+
+<!-- EN -->
+<div class="card active" id="card-en">
+  <div class="cbg"><svg viewBox="0 0 320 500"><line x1="0" y1="500" x2="160" y2="60" stroke="#F2C12E" stroke-width="1"/><line x1="320" y1="500" x2="160" y2="60" stroke="#F2C12E" stroke-width="1"/><line x1="60" y1="500" x2="160" y2="60" stroke="#F2C12E" stroke-width=".5"/><line x1="260" y1="500" x2="160" y2="60" stroke="#F2C12E" stroke-width=".5"/><circle cx="160" cy="52" r="8" fill="#F2C12E" opacity=".8"/><circle cx="160" cy="52" r="22" fill="#F2C12E" opacity=".25"/></svg></div>
+  <div class="ci">
+    <p class="ey">Quartieri Spagnoli · Napoli</p>
+    <div class="logo">D10S<span>↑</span></div>
+    <p class="sub">O' Quartiere Experience</p>
+    <div class="div"></div>
+    <h2 class="ttl">Before you leave — tell us about your <em>Napoli experience.</em></h2>
+    <p class="nap">"'A città t'impara"</p>
+    <p class="nat">"The city teaches you" — Neapolitan proverb</p>
+    <div class="when"><p>Answer <strong>before boarding</strong> — your experience is still fresh.<br>3 minutes. Anonymous. Helps us improve.</p></div>
+    <div class="qrw"><div class="qrb" id="qr-en"></div><p class="qrl">Scan me before you go ↑</p></div>
+    <div class="buls"><span class="bul">⏱ 3 min</span><span class="bul">🔒 Anonymous</span><span class="bul">❤️ Free</span><span class="bul">🤝 Helps the quarter</span></div>
+    <div class="ft"><p>A project by the people of</p><strong>QUARTIERI SPAGNOLI · NAPOLI</strong><div class="langs"><span class="lng">EN</span><span class="lng">IT</span><span class="lng">ES</span><span class="lng">DE</span><span class="lng">FR</span></div></div>
+  </div>
+</div>
+
+<!-- IT -->
+<div class="card" id="card-it">
+  <div class="cbg"><svg viewBox="0 0 320 500"><line x1="0" y1="500" x2="160" y2="60" stroke="#F2C12E" stroke-width="1"/><line x1="320" y1="500" x2="160" y2="60" stroke="#F2C12E" stroke-width="1"/><line x1="60" y1="500" x2="160" y2="60" stroke="#F2C12E" stroke-width=".5"/><line x1="260" y1="500" x2="160" y2="60" stroke="#F2C12E" stroke-width=".5"/><circle cx="160" cy="52" r="8" fill="#F2C12E" opacity=".8"/><circle cx="160" cy="52" r="22" fill="#F2C12E" opacity=".25"/></svg></div>
+  <div class="ci">
+    <p class="ey">Quartieri Spagnoli · Napoli</p>
+    <div class="logo">D10S<span>↑</span></div>
+    <p class="sub">O' Quartiere Experience</p>
+    <div class="div"></div>
+    <h2 class="ttl">Prima di partire — raccontaci la tua <em>esperienza a Napoli.</em></h2>
+    <p class="nap">"'A città t'impara"</p>
+    <p class="nat">"La città ti insegna" — Proverbio napoletano</p>
+    <div class="when"><p>Rispondi <strong>prima di imbarcarti</strong> — l'esperienza è ancora fresca.<br>3 minuti. Anonimo. Ci aiuta a migliorare.</p></div>
+    <div class="qrw"><div class="qrb" id="qr-it"></div><p class="qrl">Scansionami prima di partire ↑</p></div>
+    <div class="buls"><span class="bul">⏱ 3 min</span><span class="bul">🔒 Anonimo</span><span class="bul">❤️ Gratis</span><span class="bul">🤝 Aiuta il quartiere</span></div>
+    <div class="ft"><p>Un progetto delle persone di</p><strong>QUARTIERI SPAGNOLI · NAPOLI</strong><div class="langs"><span class="lng">EN</span><span class="lng">IT</span><span class="lng">ES</span><span class="lng">DE</span><span class="lng">FR</span></div></div>
+  </div>
+</div>
+
+<!-- ES -->
+<div class="card" id="card-es">
+  <div class="cbg"><svg viewBox="0 0 320 500"><line x1="0" y1="500" x2="160" y2="60" stroke="#F2C12E" stroke-width="1"/><line x1="320" y1="500" x2="160" y2="60" stroke="#F2C12E" stroke-width="1"/><line x1="60" y1="500" x2="160" y2="60" stroke="#F2C12E" stroke-width=".5"/><line x1="260" y1="500" x2="160" y2="60" stroke="#F2C12E" stroke-width=".5"/><circle cx="160" cy="52" r="8" fill="#F2C12E" opacity=".8"/><circle cx="160" cy="52" r="22" fill="#F2C12E" opacity=".25"/></svg></div>
+  <div class="ci">
+    <p class="ey">Quartieri Spagnoli · Nápoles</p>
+    <div class="logo">D10S<span>↑</span></div>
+    <p class="sub">O' Quartiere Experience</p>
+    <div class="div"></div>
+    <h2 class="ttl">Antes de irte — cuéntanos tu <em>experiencia en Nápoles.</em></h2>
+    <p class="nap">"'A città t'impara"</p>
+    <p class="nat">"La ciudad te enseña" — Proverbio napolitano</p>
+    <div class="when"><p>Responde <strong>antes de embarcar</strong> — tu experiencia está fresca.<br>3 minutos. Anónimo. Nos ayuda a mejorar.</p></div>
+    <div class="qrw"><div class="qrb" id="qr-es"></div><p class="qrl">Escanéame antes de irte ↑</p></div>
+    <div class="buls"><span class="bul">⏱ 3 min</span><span class="bul">🔒 Anónimo</span><span class="bul">❤️ Gratis</span><span class="bul">🤝 Ayuda al barrio</span></div>
+    <div class="ft"><p>Un proyecto de la gente de</p><strong>QUARTIERI SPAGNOLI · NÁPOLES</strong><div class="langs"><span class="lng">EN</span><span class="lng">IT</span><span class="lng">ES</span><span class="lng">DE</span><span class="lng">FR</span></div></div>
+  </div>
+</div>
+
+<!-- DE -->
+<div class="card" id="card-de">
+  <div class="cbg"><svg viewBox="0 0 320 500"><line x1="0" y1="500" x2="160" y2="60" stroke="#F2C12E" stroke-width="1"/><line x1="320" y1="500" x2="160" y2="60" stroke="#F2C12E" stroke-width="1"/><line x1="60" y1="500" x2="160" y2="60" stroke="#F2C12E" stroke-width=".5"/><line x1="260" y1="500" x2="160" y2="60" stroke="#F2C12E" stroke-width=".5"/><circle cx="160" cy="52" r="8" fill="#F2C12E" opacity=".8"/><circle cx="160" cy="52" r="22" fill="#F2C12E" opacity=".25"/></svg></div>
+  <div class="ci">
+    <p class="ey">Quartieri Spagnoli · Neapel</p>
+    <div class="logo">D10S<span>↑</span></div>
+    <p class="sub">O' Quartiere Experience</p>
+    <div class="div"></div>
+    <h2 class="ttl">Bevor du gehst — erzähl uns von deinem <em>Neapel-Erlebnis.</em></h2>
+    <p class="nap">"'A città t'impara"</p>
+    <p class="nat">"Die Stadt lehrt dich" — Neapolitanisches Sprichwort</p>
+    <div class="when"><p>Antworte <strong>vor dem Einsteigen</strong> — dein Erlebnis ist noch frisch.<br>3 Minuten. Anonym. Hilft uns zu verbessern.</p></div>
+    <div class="qrw"><div class="qrb" id="qr-de"></div><p class="qrl">Scann mich vor der Abreise ↑</p></div>
+    <div class="buls"><span class="bul">⏱ 3 Min</span><span class="bul">🔒 Anonym</span><span class="bul">❤️ Kostenlos</span><span class="bul">🤝 Hilft dem Viertel</span></div>
+    <div class="ft"><p>Ein Projekt der Menschen aus</p><strong>QUARTIERI SPAGNOLI · NEAPEL</strong><div class="langs"><span class="lng">EN</span><span class="lng">IT</span><span class="lng">ES</span><span class="lng">DE</span><span class="lng">FR</span></div></div>
+  </div>
+</div>
+
+<!-- FR -->
+<div class="card" id="card-fr">
+  <div class="cbg"><svg viewBox="0 0 320 500"><line x1="0" y1="500" x2="160" y2="60" stroke="#F2C12E" stroke-width="1"/><line x1="320" y1="500" x2="160" y2="60" stroke="#F2C12E" stroke-width="1"/><line x1="60" y1="500" x2="160" y2="60" stroke="#F2C12E" stroke-width=".5"/><line x1="260" y1="500" x2="160" y2="60" stroke="#F2C12E" stroke-width=".5"/><circle cx="160" cy="52" r="8" fill="#F2C12E" opacity=".8"/><circle cx="160" cy="52" r="22" fill="#F2C12E" opacity=".25"/></svg></div>
+  <div class="ci">
+    <p class="ey">Quartieri Spagnoli · Naples</p>
+    <div class="logo">D10S<span>↑</span></div>
+    <p class="sub">O' Quartiere Experience</p>
+    <div class="div"></div>
+    <h2 class="ttl">Avant de partir — parlez-nous de votre <em>expérience à Naples.</em></h2>
+    <p class="nap">"'A città t'impara"</p>
+    <p class="nat">"La ville t'apprend" — Proverbe napolitain</p>
+    <div class="when"><p>Répondez <strong>avant d'embarquer</strong> — votre expérience est encore fraîche.<br>3 minutes. Anonyme. Nous aide à améliorer.</p></div>
+    <div class="qrw"><div class="qrb" id="qr-fr"></div><p class="qrl">Scannez-moi avant de partir ↑</p></div>
+    <div class="buls"><span class="bul">⏱ 3 min</span><span class="bul">🔒 Anonyme</span><span class="bul">❤️ Gratuit</span><span class="bul">🤝 Aide le quartier</span></div>
+    <div class="ft"><p>Un projet des habitants de</p><strong>QUARTIERI SPAGNOLI · NAPLES</strong><div class="langs"><span class="lng">EN</span><span class="lng">IT</span><span class="lng">ES</span><span class="lng">DE</span><span class="lng">FR</span></div></div>
+  </div>
+</div>
+
+<button class="prbtn" onclick="window.print()">🖨️ Stampa / Print PDF</button>
+
+<script>
+const BASE = 'https://dios-survey.netlify.app/dios-survey.html';
+
+function showCard(lang, btn) {
+  document.querySelectorAll('.card').forEach(c => c.classList.remove('active'));
+  document.querySelectorAll('.ltab').forEach(b => b.classList.remove('active'));
+  document.getElementById('card-'+lang).classList.add('active');
+  btn.classList.add('active');
+}
+
+// Genera QR code tramite API esterna
+['en','it','es','de','fr'].forEach(l => {
+  const el = document.getElementById('qr-'+l);
+  if (!el) return;
+  const url = BASE + '?lang=' + l;
+  const qrUrl = 'https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=' + encodeURIComponent(url) + '&bgcolor=0A0A08&color=F5F0E8&margin=4';
+  el.innerHTML = '<img src="' + qrUrl + '" width="120" height="120" style="display:block" />';
+});
+</script>
+</body>
+</html>
